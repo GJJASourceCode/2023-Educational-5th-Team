@@ -27,8 +27,6 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         GetInput();
