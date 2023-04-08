@@ -11,21 +11,26 @@ public class ObstacleManager : MonoBehaviour
 
     private float delay = 0;
 
+    private bool canSpawn = true;
     void Update()
     {
         delay += Time.deltaTime;
-        if (delay > spawnDelayInSecond)
+        if (delay > spawnDelayInSecond && canSpawn)
         {
             int random = Random.Range(0, spawnPos.Count);
             Vector3 pos = spawnPos[random].position;
 
 
             random = Random.Range(0, obstacleList.Count);
-            Instantiate(obstacleList[random], pos, Quaternion.Euler(0, 90, 0));
+            Instantiate(obstacleList[random], pos, obstacleList[random].transform.rotation);
 
             delay = 0;
         }
+    }
 
 
+    public void StopSpawning()
+    {
+        canSpawn = false;
     }
 }

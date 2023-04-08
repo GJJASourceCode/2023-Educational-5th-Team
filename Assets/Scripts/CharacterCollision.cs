@@ -7,7 +7,7 @@ public class CharacterCollision : MonoBehaviour
 
     private bool canCollision = true;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("Obstacle") && canCollision)

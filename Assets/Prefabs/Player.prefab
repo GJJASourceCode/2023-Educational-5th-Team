@@ -2449,6 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+  obstacleManager: {fileID: 8185135731318725798, guid: 0cf10eefbfee52d6090e9a3b904f7126, type: 3}
 --- !u!114 &8094081059154588990
 MonoBehaviour:
   m_ObjectHideFlags: 0
