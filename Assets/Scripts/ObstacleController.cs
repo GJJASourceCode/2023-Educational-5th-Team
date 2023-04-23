@@ -12,7 +12,7 @@ public class ObstacleController : MonoBehaviour
         transform.position += new Vector3(0, 0, -1) * speed * Time.deltaTime;
 
 
-        if (transform.position.z < -3.0f)
+        if (transform.position.z < -20f)
         {
             Destroy(gameObject);
         }
