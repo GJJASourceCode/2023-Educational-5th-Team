@@ -1,11 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FenceManager : MonoBehaviour
 {
 
-     public static bool canSpawn = false;
+    public static bool canSpawn = false;
     public GameObject fence;
     public List<Transform> spawnPos;
     void Update()
@@ -13,9 +12,11 @@ public class FenceManager : MonoBehaviour
         if (canSpawn)
         {
             foreach (var pos in spawnPos)
-            {   
-                Instantiate(fence, pos.position, fence.transform.rotation);
+            {
+                var fenceClone = Instantiate(fence, pos.position, fence.transform.rotation);
                 canSpawn = false;
+
+                fenceClone.transform.SetParent(GameObject.Find("Environment").transform);
             }
         }
     }
