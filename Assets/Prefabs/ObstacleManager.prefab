@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8185135731318725797}
   - component: {fileID: 8185135731318725798}
+  - component: {fileID: 3805464458896317795}
+  - component: {fileID: 8193767924988215194}
   m_Layer: 0
   m_Name: ObstacleManager
   m_TagString: Untagged
@@ -51,3 +53,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   spawnDelayInSecond: 1
+--- !u!114 &3805464458896317795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8185135731318725799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc724153a73a8e04399e9b7922ebb2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fence: {fileID: 3229793387135168959, guid: 166304eccf65ab54fa24b29923337630, type: 3}
+  spawnPos:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &8193767924988215194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8185135731318725799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e77f4744c3037d3b73468886eac304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rail: {fileID: 8808673692628364713, guid: f13a980b69b67002086382ac010b2540, type: 3}
+  spawnPos: {fileID: 0}

@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-
     public List<GameObject> obstacleList;
     public List<Transform> spawnPos;
     public float spawnDelayInSecond = 1f;
@@ -22,7 +20,10 @@ public class ObstacleManager : MonoBehaviour
 
 
             random = Random.Range(0, obstacleList.Count);
-            Instantiate(obstacleList[random], pos, obstacleList[random].transform.rotation);
+            var obstacleClone = Instantiate(obstacleList[random], pos, obstacleList[random].transform.rotation);
+
+            obstacleClone.transform.SetParent(GameObject.Find("Obstacle").transform);
+
 
             delay = 0;
         }
