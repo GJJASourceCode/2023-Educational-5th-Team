@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -8,8 +6,6 @@ public class Character : MonoBehaviour
     private Animator animator;
 
     private bool canFall = true;
-
-    public ObstacleManager obstacleManager;
 
     void Start()
     {
@@ -22,7 +18,9 @@ public class Character : MonoBehaviour
         {
             animator.SetTrigger("Fall");
             canFall = false;
-            obstacleManager.StopSpawning();
+            GameObject.FindObjectOfType<ObstacleManager>().StopSpawning();
+            GameObject.FindObjectOfType<FenceManager>().StopSpawning();
+            GameObject.FindObjectOfType<RailManager>().StopSpawning();
             Destroy(GetComponent<CharacterController>());
 
         }

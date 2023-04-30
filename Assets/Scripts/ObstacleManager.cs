@@ -22,7 +22,7 @@ public class ObstacleManager : MonoBehaviour
             random = Random.Range(0, obstacleList.Count);
             var obstacleClone = Instantiate(obstacleList[random], pos, obstacleList[random].transform.rotation);
 
-            obstacleClone.transform.SetParent(GameObject.Find("Environment").transform);
+            obstacleClone.transform.SetParent(GameObject.Find("Obstacle").transform);
 
 
             delay = 0;

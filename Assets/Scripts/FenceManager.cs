@@ -16,7 +16,7 @@ public class FenceManager : MonoBehaviour
                 var fenceClone = Instantiate(fence, pos.position, fence.transform.rotation);
                 canSpawn = false;
 
-                fenceClone.transform.SetParent(GameObject.Find("Environment").transform);
+                fenceClone.transform.SetParent(GameObject.Find("Fence").transform);
             }
         }
     }
